@@ -19,3 +19,4 @@ RUN cd && git clone https://github.com/apiaryio/drafter.git && \
     make drafter && \
     make install
 RUN go get -u github.com/peterhellberg/hiro
+ENTRYPOINT ["tail", "-f", "/dev/null"]
