@@ -1,7 +1,7 @@
 FROM golang:alpine
 RUN apk update && \
     apk upgrade && \
-    apk add git mercurial make g++
+    apk add git mercurial make g++ python2
 # Build latest snowcrash separately, because the one inside drafter does not
 # compile, so we will inject another version manually.
 RUN cd && git clone --recursive git://github.com/apiaryio/snowcrash.git && \
